@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "no_teleport",
+  "version": "${version}",
+  "name": "No Teleport",
+  "description": "Client-side mod that makes Nether portals solid locally to prevent normal portal teleportation.",
+  "authors": [
+    "Rutubet"
+  ],
+  "license": "MIT",
+  "environment": "client",
+  "mixins": [
+    {
+      "config": "no_teleport.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=0.19.3",
+    "minecraft": "26.1.2",
+    "java": ">=25"
+  }
+}
