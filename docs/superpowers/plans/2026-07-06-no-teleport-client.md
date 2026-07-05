@@ -104,6 +104,7 @@ dependencies {
 	minecraft "com.mojang:minecraft:${project.minecraft_version}"
 	implementation "net.fabricmc:fabric-loader:${project.loader_version}"
 	testImplementation "org.junit.jupiter:junit-jupiter:${project.junit_version}"
+	testRuntimeOnly "org.junit.platform:junit-platform-launcher"
 }
 
 processResources {
@@ -133,6 +134,7 @@ Create `.gitignore`:
 
 ```gitignore
 .gradle/
+.tmp-gradle/
 build/
 run/
 out/
@@ -295,6 +297,7 @@ Create `src/main/resources/no_teleport.client.mixins.json`:
 {
   "required": true,
   "minVersion": "0.8",
+  "compatibilityLevel": "JAVA_25",
   "package": "com.rutubet.noteleport.mixin",
   "client": [
     "NetherPortalCollisionMixin"
